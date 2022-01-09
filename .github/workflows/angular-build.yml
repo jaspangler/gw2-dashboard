@@ -1,4 +1,4 @@
-name: NodeJS with Gulp
+name: NodeJS with Grunt
 
 on:
   push:
@@ -24,5 +24,6 @@ jobs:
 
     - name: Build
       run: |
+        npm install -g @angular/cli
         npm install
-        gulp
+        ng build --prod
